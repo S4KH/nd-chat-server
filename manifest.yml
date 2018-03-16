@@ -4,4 +4,4 @@ applications:
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   disk_quota: 128MB
   memory: 64MB
-  instances: 2
+  instances: 1
