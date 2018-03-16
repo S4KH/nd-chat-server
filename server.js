@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const http  = require('http').Server(app)
 const io = require('socket.io')(http)
+const sticky = require('sticky-session')
 const port = process.env.PORT || 3000
 
 const passport = require('passport')
@@ -36,6 +37,8 @@ io.on('connection', (socket) => {
   })
 })
 
-http.listen(port, () => {
-  console.log(`live on:${port}`)
-})
+if(!sticky.listen(http, port)) {
+  http.once('listening', function() {
+    console.log(`server started in ${port} port`)
+  })  
+}

@@ -1,0 +1,7 @@
+applications:
+- name: socket-io.chat
+  command: node server.js
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  disk_quota: 128MB
+  memory: 64MB
+  instances: 2

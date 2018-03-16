@@ -28,6 +28,10 @@
     "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.0.4",
+    "sticky-session": "^1.1.2"
+  },
+  "engines": {
+    "node": "6.13.x"
   }
 }
